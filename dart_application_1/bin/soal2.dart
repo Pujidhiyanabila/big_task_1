@@ -16,16 +16,22 @@ void main() {
 
   //print hasil nilai final
   print(
-      "Karena angka yang diinputkan adalah $angka. Maka termasuk dalam kategori ${kategoriAngka(angkaInput)}");
+      "Karena angka yang diinputkan $angka. Maka hasilnya adalah ${kategoriAngka(angkaInput)}");
 
 }
 String kategoriAngka(int angkaInput) {
   String kategoriAngka;
 
-  if (angkaInput % 2 == 0) {
-    kategoriAngka = "true";
+  if (angkaInput > 180 && angkaInput < 360) {
+    kategoriAngka = "${(angkaInput - 180)}";
+  } else if (angkaInput < 180 && angkaInput > 0) {
+    kategoriAngka = "${(angkaInput + 180)}";
+  } else if (angkaInput <= 0) {
+    kategoriAngka = "0";
+  } else if (angkaInput >= 360) {
+    kategoriAngka = "0";
   } else {
-    kategoriAngka = "false";
+    kategoriAngka = "0";
   }
 
   return kategoriAngka;
