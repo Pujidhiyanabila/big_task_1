@@ -6,7 +6,7 @@ void main() {
   stdout.write("Inputkan Angka : ");
   n = int.parse(stdin.readLineSync().toString());
 
-  for(var i=n; i>=1; i--) {
+  for(var i=n; i>1; i--) {
     for(var m=i; m<n; m++) {
       stdout.write(' ');
     }
